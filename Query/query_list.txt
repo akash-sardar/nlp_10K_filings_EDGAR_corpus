@@ -1,0 +1,23 @@
+[
+    {
+        "query": "What is the outstanding amount of Subordinated Debentures in 2020?",
+    },
+    {
+        "query": "How much money was allocated under the HHSB Act in 2020 ?",
+    },
+    {
+        "query": "What is the FDIC's standard maximum deposit insurance amount in 2020 ?",
+    },
+    {
+        "query": "What amount of wholesale deposit was purchased in 2018 ?",
+     },
+    {
+        "query": "In the year 2020, what were the general risk that the company was subjected to ?",
+    },
+    {
+        "query": "How much money was allocated under the CARES Act in 2018 ?",
+    },
+    {
+        "query": "As of the year 2019, describe the elements of an extensive regulatory framework which are applicable to bank holding companies and banks ?",
+    }
+]
