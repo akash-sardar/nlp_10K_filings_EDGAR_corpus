@@ -21,14 +21,18 @@
 │       └── main_utils.py           # Shared embedding functions
 ├── Knowledge/
 │   └── df_chunked_pandas.csv       # Preprocessed chunks for RAG
+├── Notebooks/
+│   ├── task_01-B.ipynb             # Notebook experiments for Clustering task
+│   ├── task_01.ipynb               # Notebook experiments for Clustering task
+│   └── task-02.ipynb                # Notebook Experiments for RAG
 ├── Clustering_Results/             # Task 1 outputs
 │   ├── Fig_01_*.jpeg               # Section-colored t-SNE plot
 │   ├── Fig_02_*.jpeg               # Cluster-colored t-SNE plot
 │   ├── Fig_03_*.jpeg               # Outlier visualization
-│   └── summary_statistics.csv     # Clustering metrics
+│   └── summary_statistics.csv      # Clustering metrics
 ├── RAG_Validation_Results/         # Task 2 outputs
 │   ├── VALIDATION_DATA.py          # Ground truth queries
-│   └── evaluation_results.csv     # RAG performance metrics
+│   └── evaluation_results.csv      # RAG performance metrics
 └── .gitignore                      # Version control exclusions
 ```
 
