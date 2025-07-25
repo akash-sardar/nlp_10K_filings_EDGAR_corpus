@@ -56,8 +56,6 @@ def create_custom_chunks(text:str, overlap: int = 200, chunk_size = 2000)-> list
             start = right - overlap
             # Prevent index error
             while start < len(text):
-                if start == 0:
-                    break
                 if not (text[start].isalnum() and text[start-1].isalnum()):
                     break
                 start += 1
@@ -97,13 +95,14 @@ class Chunking:
             # Start Spark session with optimized configurations
             self.spark = SparkSession.builder \
                 .appName("AIG_SEC_Filing_Analysis") \
-                .config("spark.sql.adaptive.enabled", "true") \
-                .config("spark.sql.adaptive.coalescePartitions.enabled", "true") \
+                .master("local[8]") \
                 .config("spark.driver.memory", "4g") \
                 .config("spark.executor.memory", "4g") \
-                .config("spark.python.worker.memory", "4g") \
-                .config("spark.sql.shuffle.partitions", "100") \
-                .config("spark.sql.execution.pyspark.udf.faulthandler.enabled","true") \
+                .config("spark.python.worker.memory", "2g") \
+                .config("spark.sql.shuffle.partitions", "50") \
+                .config("spark.sql.adaptive.enabled", "true") \
+                .config("spark.sql.adaptive.coalescePartitions.enabled", "true") \
+                .config("spark.sql.execution.pyspark.udf.faulthandler.enabled", "true") \
                 .config("spark.python.worker.faulthandler.enabled", "true") \
                 .getOrCreate()
 

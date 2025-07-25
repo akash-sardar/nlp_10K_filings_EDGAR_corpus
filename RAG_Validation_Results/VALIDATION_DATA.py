@@ -3,28 +3,28 @@ validation = [
         "query": "What is the outstanding amount of Subordinated Debentures in 2020?",
         "expected_value": "$12,887,000",
         "year": "2020",
-        "chunk_id": "6bb74a17-d3dc-4a22-91c8-a37afe5ac18e",
-        "section": "item_8"
+        "chunk_id": "c289e2ee-76cb-414d-aa7f-e08ebb0ef5fe",
+        "section": "section_1A"
     },
     {
         "query": "How much money was allocated under the HHSB Act in 2020 ?",
         "expected_value": "$284.45 billion",
         "year": "2020",
-        "chunk_id": "d4650e17-66c5-44f7-90a1-abdd5287b7cc",
+        "chunk_id": "c0fcce30-014f-4513-9836-03f71333d1d0",
         "section": "section_1"
     },
     {
         "query": "What is the FDIC's standard maximum deposit insurance amount in 2020 ?",
         "expected_value": "$250,000",
         "year": "2020",
-        "chunk_id": "13b7893f-f441-4fba-a6b1-54ee5c9e3ca0",
+        "chunk_id": "cd993176-e456-41bf-ada1-be48c4443871",
         "section": "section_1"
     },
     {
         "query": "What amount of wholesale deposit was purchased in 2018 ?",
         "expected_value": "$35.3 million",
         "year": "2018",
-        "chunk_id": "d04471ec-a841-49a9-b656-959f2866e6bd",
+        "chunk_id": "009ee9c4-bb75-46e7-9e97-c307cebf43ad",
         "section": "section_1"
      },
      {
@@ -34,8 +34,8 @@ Additionally, the company faced substantial competition from a wide range of fin
 Technological advancements also introduced new competitive threats. Financial transactions could increasingly be completed electronically without the need for a bank’s physical presence or even bank involvement at all. Consumers now had the option to transfer funds and pay bills online or by phone, using fintech services that often operated with lower costs and lighter regulatory burdens. This trend placed pressure on the company’s fee income, deposit levels, and income derived from those deposits.
 Furthermore, the emergence of out-of-market competitors offering digital-first solutions created new challenges in customer retention and acquisition. Collectively, these risks threatened the company’s market share, profitability, and long-term viability if it failed to adapt to the rapidly changing financial services landscape.
 """,
-        "year": "2018",
-        "chunk_id": "36665ebd-9caa-40e1-af21-c258dc416f55",
+        "year": "2020",
+        "chunk_id": "80dd0748-7352-454a-881c-b1b8ae6a3314",
         "section": "section_1A"
     },
     {
@@ -54,7 +54,7 @@ Additional provisions mandate reasonable and proportional debit card interchange
 Banking operates as a highly regulated business where federal and state law changes are frequent and unpredictable. While many Dodd-Frank provisions target systemically significant large institutions, they indirectly affect smaller banking organizations through competitive pressures and regulatory standards, creating an environment where company earnings are significantly influenced by economic conditions, management policies, and regulatory authority actions.
         """,
         "year": "2019",
-        "chunk_id": "66bb2611-a118-4d4e-ac68-009d8b2b8644",
+        "chunk_id": "ade28f29-6046-47ad-a5d6-61e1bb69b1c0",
         "section": "section_1"
     }
 ]

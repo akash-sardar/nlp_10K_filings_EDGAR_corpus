@@ -22,9 +22,10 @@
 ├── Knowledge/
 │   └── df_chunked_pandas.csv       # Preprocessed chunks for RAG
 ├── Notebooks/
-│   ├── task_01-B.ipynb             # Notebook experiments for Clustering task
-│   ├── task_01.ipynb               # Notebook experiments for Clustering task
-│   └── task-02.ipynb                # Notebook Experiments for RAG
+│   ├── Notebook_RAG_task_02.ipynb               # Notebook Experiments for RAG
+│   ├── Notebook_RAG_task_02.html                # HTML Presentation for RAG
+│   ├── Notebook_clustering_task_01.ipynb        # Notebook Experiments for RAG
+│   └── Notebook_clustering_task_01.html         # HTML Presentation for Clustering task
 ├── Clustering_Results/             # Task 1 outputs
 │   ├── Fig_01_*.jpeg               # Section-colored t-SNE plot
 │   ├── Fig_02_*.jpeg               # Cluster-colored t-SNE plot
@@ -85,7 +86,7 @@ python app.py rag
 
 **Results**:
 - 2,217 chunks from 10 companies
-- 41 outliers (1.85%)
+- 48 outliers (2.16%)
 - 3 visualization plots generated
 
 ## Task 2: RAG System
