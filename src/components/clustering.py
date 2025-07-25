@@ -53,7 +53,7 @@ class Clustering:
             raise(e)
 
 
-    def perform_pca(self, arr: np.array, n_components = 75):
+    def perform_pca(self, arr: np.array, n_components = 66):
         """
         Performs Principal Component Analysis for dimensionality reduction
         

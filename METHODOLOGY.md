@@ -60,7 +60,7 @@
 ## 4. Dimensionality Reduction
 
 ### 4.1 Principal Component Analysis (PCA)
-- **Components**: 75 (explains 85% variance)
+- **Components**: 66 (explains 85% variance)
 - **Rationale**: No clear elbow point, gradual variance decay
 - **Variance Distribution**: Information spread across many dimensions
 
@@ -73,7 +73,7 @@
 
 ### 5.1 K-Means Configuration
 - **Clusters**: 20 (optimal trade-off between compression and accuracy)
-- **Input**: PCA-reduced embeddings (75 dimensions)
+- **Input**: PCA-reduced embeddings (66 dimensions)
 - **Evaluation**: Silhouette score = 0.0898 (highest among tested values)
 
 ### 5.2 Cluster Selection Rationale
@@ -111,7 +111,7 @@
 | Metric | Value |
 |--------|-------|
 | Total Chunks | 2,217 |
-| Total Outliers | 41 (1.85%) |
+| Total Outliers | 48 (2.16%) |
 | Unique Companies | 10 |
 | Unique Sections | 20 |
 | Average Chunk Length | 1,506 characters |
@@ -129,7 +129,7 @@
 - **Silhouette Score**: 0.0898 (k=20) representing optimal trade-off between compression and accuracy
 - **Semantic Separation**: t-SNE reveals clear section-based clustering with some cross-section overlap due to shared legal terminology
 
-**Analysis**: Low outlier rate (1.85%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
+**Analysis**: Low outlier rate (2.16%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
 
 ## 9. RAG Pipeline (Task 2)
 
@@ -180,7 +180,7 @@
 | Metric | Value |
 |--------|-------|
 | Total Chunks | 2,217 |
-| Total Outliers | 41 (1.85%) |
+| Total Outliers | 48 (2.16%) |
 | Unique Companies | 10 |
 | Unique Sections | 20 |
 | Average Chunk Length | 1,506 characters |
@@ -205,7 +205,7 @@
 |--------|-------------|
 | Answer Accuracy | 100.0% (7/7 correct) |
 | Chunk Recall | 85.7% (6/7 retrieved) |
-| Top-1 Chunk Accuracy | 42.9% (3/7 exact match) |
+| Top-1 Chunk Accuracy | 57.1% (4/7 exact match) |
 | Average BERT F1 Score | 0.846 |
 | BERT Pass Rate (>0.8) | 100.0% |
 | Average Retrieval Score | 0.494 |
