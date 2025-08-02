@@ -60,7 +60,7 @@
 ## 4. Dimensionality Reduction
 
 ### 4.1 Principal Component Analysis (PCA)
-- **Components**: 66 (explains 85% variance)
+- **Components**: 85 (explains 85% variance)
 - **Rationale**: No clear elbow point, gradual variance decay
 - **Variance Distribution**: Information spread across many dimensions
 
@@ -72,21 +72,21 @@
 ## 5. Clustering Analysis
 
 ### 5.1 K-Means Configuration
-- **Clusters**: 20 (optimal trade-off between compression and accuracy)
-- **Input**: PCA-reduced embeddings (66 dimensions)
+- **Clusters**: 13 (optimal trade-off between compression and accuracy)
+- **Input**: PCA-reduced embeddings (85 dimensions)
 - **Evaluation**: Silhouette score = 0.0898 (highest among tested values)
 
 ### 5.2 Cluster Selection Rationale
 - Tested k=6 to k=24 using silhouette analysis
 - Low silhouette scores indicate tightly grouped data points
-- k=20 provides meaningful separation for 10 companies × 20 sections
+- k=13 provides meaningful separation for 10 companies × 20 sections
 
 ## 6. Outlier Detection
 
 ### 6.1 Statistical Threshold Method
 - **Metric**: Euclidean distance to nearest cluster center
 - **Threshold**: mean + 2 × standard deviation
-- **Results**: 41 outliers (1.85% of 2,217 total chunks)
+- **Results**: 49 outliers (2.32% of 2K total chunks)
 
 ### 6.2 Outlier Distribution
 - **Primary Sections**: section_1, section_1A, section_8, section_15
@@ -96,9 +96,9 @@
 ## 7. Visualization Strategy
 
 ### 7.1 Three-Plot Approach
-1. **Cluster Visualization**: t-SNE plot colored by cluster assignments
+1. **Cluster Visualization**: UMAP plot colored by cluster assignments
 2. **Outlier Analysis**: Normal points (blue) vs outliers (red) with annotations
-3. **Section Analysis**: t-SNE plot colored by section names
+3. **Section Analysis**: UMAP plot colored by section names
 
 ### 7.2 Technical Implementation
 - **Library**: matplotlib, seaborn, colorcet
@@ -110,26 +110,26 @@
 ### 8.1 Results Summary
 | Metric | Value |
 |--------|-------|
-| Total Chunks | 2,217 |
-| Total Outliers | 48 (2.16%) |
+| Total Chunks | 2,109 |
+| Total Outliers | 49 (2.32%) |
 | Unique Companies | 10 |
 | Unique Sections | 20 |
 | Average Chunk Length | 1,506 characters |
-| K-means Clusters | 20 |
+| K-means Clusters | 13 |
 
 ### 8.2 Visualizations Generated
-1. **Fig_01_2D_Embeddings_with_Section_name_colors.jpeg** - t-SNE plot colored by section names
-2. **Fig_02_2D_Embeddings_clusters.jpeg** - t-SNE plot colored by cluster assignments  
-3. **Fig_03_2D_Embeddings_outliers.jpeg** - t-SNE plot highlighting outliers with CIK-section-chunk labels
+1. **Fig_01_2D_Embeddings_with_Section_name_colors.jpeg** - UMAP plot colored by section names
+2. **Fig_02_2D_Embeddings_clusters.jpeg** - UMAP plot colored by cluster assignments  
+3. **Fig_03_2D_Embeddings_outliers.jpeg** - UMAP plot highlighting outliers with CIK-section-chunk labels
 
 ### 8.3 Clustering Analysis Results
 - **Section Distribution**: Sections 1, 1A, 7, 8, 15 show high dispersion across multiple clusters (diverse content)
 - **Compact Clusters**: Sections 9A, 9B form tight clusters (standardized legal language)
 - **Outlier Concentration**: Primary outliers in sections 1, 1A, 8, 15 indicating unique/non-standard content
-- **Silhouette Score**: 0.0898 (k=20) representing optimal trade-off between compression and accuracy
-- **Semantic Separation**: t-SNE reveals clear section-based clustering with some cross-section overlap due to shared legal terminology
+- **Silhouette Score**: 0.0898 (k=13) representing optimal trade-off between compression and accuracy
+- **Semantic Separation**: UMAP reveals clear section-based clustering with some cross-section overlap due to shared legal terminology
 
-**Analysis**: Low outlier rate (2.16%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
+**Analysis**: Low outlier rate (2.32%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
 
 ## 9. RAG Pipeline (Task 2)
 
@@ -179,17 +179,17 @@
 ### 12.1 Clustering Performance (Task 1)
 | Metric | Value |
 |--------|-------|
-| Total Chunks | 2,217 |
-| Total Outliers | 48 (2.16%) |
+| Total Chunks | 2,109 |
+| Total Outliers | 49 (2.32%) |
 | Unique Companies | 10 |
 | Unique Sections | 20 |
 | Average Chunk Length | 1,506 characters |
-| K-means Clusters | 20 |
+| K-means Clusters | 13 |
 
 **Visualizations Generated:**
-1. **Fig_01_2D_Embeddings_with_Section_name_colors.jpeg** - t-SNE plot colored by section names
-2. **Fig_02_2D_Embeddings_clusters.jpeg** - t-SNE plot colored by cluster assignments  
-3. **Fig_03_2D_Embeddings_outliers.jpeg** - t-SNE plot highlighting outliers with CIK-section-chunk labels
+1. **Fig_01_2D_Embeddings_with_Section_name_colors.jpeg** - UMAP plot colored by section names
+2. **Fig_02_2D_Embeddings_clusters.jpeg** - UMAP plot colored by cluster assignments  
+3. **Fig_03_2D_Embeddings_outliers.jpeg** - UMAP plot highlighting outliers with CIK-section-chunk labels
 
 **Clustering Analysis Results:**
 - **Section Distribution**: Sections 1, 1A, 7, 8, 15 show high dispersion across multiple clusters (diverse content)
@@ -198,7 +198,7 @@
 - **Silhouette Score**: 0.0898 (k=20) representing optimal trade-off between compression and accuracy
 - **Semantic Separation**: t-SNE reveals clear section-based clustering with some cross-section overlap due to shared legal terminology
 
-**Analysis**: Low outlier rate (1.85%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
+**Analysis**: Low outlier rate (2.32%) indicates consistent semantic patterns across SEC filings. Visualizations reveal section-based clustering with outliers concentrated in diverse content areas (sections 1, 1A, 8, 15).
 
 ### 12.2 RAG Validation Results (Task 2)
 | Metric | Performance |
