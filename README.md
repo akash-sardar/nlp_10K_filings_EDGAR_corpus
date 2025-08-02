@@ -22,10 +22,12 @@
 ├── Knowledge/
 │   └── df_chunked_pandas.csv       # Preprocessed chunks for RAG
 ├── Notebooks/
-│   ├── Notebook_RAG_task_02.ipynb               # Notebook Experiments for RAG
-│   ├── Notebook_RAG_task_02.html                # HTML Presentation for RAG
-│   ├── Notebook_clustering_task_01.ipynb        # Notebook Experiments for RAG
-│   └── Notebook_clustering_task_01.html         # HTML Presentation for Clustering task
+│   ├── Notebook_RAG_task_02.ipynb                          # Notebook Experiments for RAG
+│   ├── Notebook_RAG_task_02.html                           # HTML Presentation for RAG
+│   ├── Notebook_clustering_task_01_refined.ipynb           # Notebook Experiments for Clustering task
+│   ├── Notebook_clustering_task_01_refined.html            # HTML Presentation for Clustering task
+│   ├── Notebook_clustering_task_01.ipynb                   # Notebook Experiments for Clustering task
+│   └── Notebook_clustering_task_01.html                    # HTML Presentation for Clustering task
 ├── Clustering_Results/             # Task 1 outputs
 │   ├── Fig_01_*.jpeg               # Section-colored t-SNE plot
 │   ├── Fig_02_*.jpeg               # Cluster-colored t-SNE plot
